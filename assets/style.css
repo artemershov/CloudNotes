@@ -1,0 +1,209 @@
+/*========= Base ===========*/
+
+	body, h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'PT Sans', sans-serif;}
+
+	body {
+		background-position: center;
+		background-attachment: fixed;
+		-webkit-transition: background 0.5s ease;
+		transition: background 0.5s ease;
+	}
+
+	body.bgtiled  {background-repeat: repeat;}
+	body.bgfilled {
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	body.bgcolor1 {background-color: #b24436;}
+	body.bgcolor2 {background-color: #996c4c;}
+	body.bgcolor3 {background-color: #397360;}
+	body.bgcolor4 {background-color: #364459;}
+	body.bgcolor5 {background-color: #41364c;}
+	body.bgcolor6 {background-color: #333333;}
+
+
+	body, header {padding: 15px 0;}
+	header .btn, header #search input, header h1 {margin: 0 0 15px;}
+	header .btn, header #search input {box-shadow: 0 3px 10px rgba(0,0,0,0.2);}
+	header h1 {
+		text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+		color: #FFF;
+	}
+
+	.lh-xs {line-height: 24px;}
+	.lh-sm {line-height: 35px;}
+
+	.fg-mreset {margin-top: -15px;}
+
+	.fs {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.tt {
+		display: table;
+		width: 100%;
+	}
+	.tc {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 20px 0;
+	}
+
+	#notification {
+		position: fixed;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		z-index: 2000;
+		margin: auto;
+		width: 320px;
+		padding: 16px;
+		background: rgba(0,0,0,0.8);
+		color: #FFF;
+		border-radius: 6px;
+	}
+
+/*========= Notes ==========*/
+
+	.note-title {margin: 0 0 15px;}
+	.note-text img, .note-text iframe {max-width: 100%;}
+
+/*========= Grid ===========*/
+
+	.grid-item {
+		display: block;
+		margin-bottom: 30px;
+		color: inherit;
+	}
+	.grid-item:hover,
+	.grid-item:active,
+	.grid-item:focus {
+		text-decoration: none;
+		outline: none;
+		color: inherit;
+	}
+
+	.note-load {cursor: pointer;}
+	.bordered {
+		border: 3px dashed #FFF;
+		border-radius: 6px;
+		color: #FFF;
+	}
+
+	.note-item .panel {
+		width: 100%;
+		overflow: hidden;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+		margin-bottom: 0;
+	}
+	.note-item .panel, .note-item .panel-footer {border: none;}
+	.note-item .note-title {margin: 0;}
+	.note-item .note-title + .note-text {margin-top: -15px;}
+	.note-item .note-content img {width: 100%;}
+	.note-item .note-content {
+		position: relative;
+		min-height: 95px;
+	}
+	.note-item .note-media {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	/*=== Video icon ===*/
+
+		.note-item.video .note-media:after,
+		.note-item.video .note-media:before {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.note-item.video .note-media:before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			background: #FFF;
+			z-index: 2;
+		}
+		.note-item.video .note-media:after {
+			content: "\f16a";
+			width: 50px;
+			height: 50px;
+			font-family: "FontAwesome";
+			text-align: center;
+			font-size: 50px;
+			line-height: 50px;
+			color: #CC181E;
+			z-index: 3;
+		}
+
+	/*@media (min-width: 992px) {
+		.note-item .panel-footer {
+			display: none;
+			margin-top: -45px;
+			position: relative;
+			z-index: 200;
+		}
+		.note-item:hover .panel-footer {display: block;}
+	}*/
+
+/*========= Editor =========*/
+
+	.note-editor.note-frame {border: 2px solid #dce4ec;}
+	.note-editor.note-frame.active {border: 2px solid #2c3e50;}
+	.note-editor.note-frame.panel {margin-bottom: 0;}
+	.has-error .note-editor.note-frame {border: 2px solid #e74c3c;}
+	.note-editable script {
+		display: block;
+		background-color: #f9f9f9;
+		border: 1px solid #ddd;
+		padding: 5px 10px;
+	}
+	.note-editable script:before {
+		display: block;
+		content: "<script>";
+	}
+	.note-editable script:after {
+		content: '</''script>';
+		display: block;
+	}
+
+/*========= Settings =======*/
+
+	.color-label {
+		display: block;
+		width: 100%;
+		height: 50px;
+		padding: 0 !important;
+		margin-bottom: 10px !important;
+		text-align: center;
+	}
+	.color-label:hover {opacity: 0.9;}
+	.color-label i {
+		display: none;
+		color: #FFF !important;
+		line-height: 50px;
+		font-size: 24px;
+	}
+	.color-radio:checked + i {
+		display: inline;
+	}
+
+/*========= Scroll =========*/
+
+	*::-webkit-scrollbar {width: 5px;}
+	*::-webkit-scrollbar-track {background: #FFF;}
+	*::-webkit-scrollbar-thumb {background: #95a5a6;}
+
+/*========= DEBUG ==========*/
+
+	/** {outline: 1px solid #CCC;} */
