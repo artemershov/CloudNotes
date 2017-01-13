@@ -262,15 +262,8 @@ class NoteController {
 				 $note .= '<h5 class="note-title panel-body">' . $title . '</h5>';
 			}
 		}
-		if ($m) {
-			if (!$title && !$t && mb_strlen($m) < 65000) {
-				// <img> for proper note sizing, style = visible: hidden
-				$note .= '<div class="note-media" style="background-image: url(' . $m . ');"><img class="invisible" src="' . $m . '"></div>';
-			} else {
-				$note .= '<div class="note-media"><img src="' . $m . '"></div>';
-			}
-		}
-		if ($t)     $note .= '<div class="note-text panel-body">' . $t . '</div>';
+		if ($m) $note .= '<div class="note-media"><img src="' . $m . '"></div>';
+		if ($t) $note .= '<div class="note-text panel-body">' . $t . '</div>';
 
 		$note .= '		</div>';
 		$note .= '		<div class="panel-footer">';

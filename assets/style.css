@@ -86,7 +86,6 @@
 		color: inherit;
 	}
 
-	.note-load {cursor: pointer;}
 	.bordered {
 		border: 3px dashed #FFF;
 		border-radius: 6px;
@@ -103,19 +102,10 @@
 	.note-item .note-title {margin: 0;}
 	.note-item .note-title + .note-text {margin-top: -15px;}
 	.note-item .note-content img {width: 100%;}
-	.note-item .note-content {
-		position: relative;
-		min-height: 95px;
-	}
-	.note-item .note-media {
-		position: relative;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
 
 	/*=== Video icon ===*/
 
+		.note-item.video .note-media {position: relative;}
 		.note-item.video .note-media:after,
 		.note-item.video .note-media:before {
 			display: block;
@@ -145,16 +135,6 @@
 			color: #CC181E;
 			z-index: 3;
 		}
-
-	/*@media (min-width: 992px) {
-		.note-item .panel-footer {
-			display: none;
-			margin-top: -45px;
-			position: relative;
-			z-index: 200;
-		}
-		.note-item:hover .panel-footer {display: block;}
-	}*/
 
 /*========= Editor =========*/
 
@@ -206,4 +186,4 @@
 
 /*========= DEBUG ==========*/
 
-	/** {outline: 1px solid #CCC;} */
+	/** {outline: 1px solid #CCC;}
